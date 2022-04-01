@@ -1,0 +1,24 @@
+base:
+    data_dir: "/full/path/to/data"
+    role: "full_node"
+    waypoint:
+        from_file: "/full/path/to/waypoint.txt"
+
+execution:
+    genesis_file_location: "/full/path/to/devnet.blob"
+
+full_node_networks:
+    - discovery_method: "onchain"
+      listen_address: "/ip4/127.0.0.1/tcp/6180"
+      network_id: "public"
+      # This is my node. You can change other nodes.
+      seeds:
+        1fd679aa3718d5669510287347cdb948fa0db9e4391825ece30bb28e1e45561f:
+          addresses:
+          - "/ip4/194.233.68.250/tcp/6180/ln-noise-ik/1fd679aa3718d5669510287347cdb948fa0db9e4391825ece30bb28e1e45561f/ln-handshake/0"
+          role: "Upstream"
+
+
+api:
+    enabled: true
+    address: 127.0.0.1:8080
